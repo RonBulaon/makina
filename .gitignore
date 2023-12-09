@@ -8,7 +8,6 @@
 !README.md
 
 # But don't ignore this specific directory
-!/config/
 !/local/share/dolphin/*
 !/local/share/fonts/*
 !/config/alacritty/*
