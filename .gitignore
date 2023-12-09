@@ -8,34 +8,34 @@
 !README.md
 
 # But don't ignore this specific directory
-!/local/share/dolphin/
-!/local/share/fonts/
-!/config/alacritty/
-!/config/awesome/
-!/config/bash/
-!/config/dconf/
-!/config/dolphinrc/
-!/config/font-manager/
-!/config/fontconfig/
-!/config/gtk-2.0/
-!/config/htop/
-!/config/kconf_updaterc/
-!/config/kde.org/
-!/config/kdeglobals/
-!/config/neofetch/
-!/config/nitrogen/
-!/config/picom/
-!/config/polybar/
-!/config/procps/
-!/config/pulse/
-!/config/qt5ct/
-!/config/rofi/
-!/config/scripts/
-!/config/session/
-!/config/starship.toml
-!/config/tmux/
-!/config/wal/
+!local/share/dolphin/
+!local/share/fonts/
+!config/alacritty/
+!config/awesome/
+!config/bash/
+!config/dconf/
+!config/dolphinrc/
+!config/font-manager/
+!config/fontconfig/
+!config/gtk-2.0/
+!config/htop/
+!config/kconf_updaterc/
+!config/kde.org/
+!config/kdeglobals/
+!config/neofetch/
+!config/nitrogen/
+!config/picom/
+!config/polybar/
+!config/procps/
+!config/pulse/
+!config/qt5ct/
+!config/rofi/
+!config/scripts/
+!config/session/
+!config/starship.toml
+!config/tmux/
+!config/wal/
 
 
 # Ignore everything in the specific directory
-!/wallpaper/
+!wallpaper/
