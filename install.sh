@@ -28,13 +28,13 @@ fi
 sudo sh -c 'echo "options i915 modeset=1 enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_huc=1 enable_psr=1 disable_power_well=0" > /etc/modprobe.d/i915.conf'
 
 # Update
-sudo sh -c "pacman -Sy"
+sudo sh -c "pacman -Sy --noconfirm "
 
 # Install python-pywal
 sudo sh -c "pacman -S --noconfirm python-pywal"
 
 # SSH
-sudo pacman -S openssh && sudo systemctl start sshd && sudo systemctl enable sshd
+sudo pacman -S --noconfirm openssh && sudo systemctl start sshd && sudo systemctl enable sshd
 
 # Scripts
 echo "Making scripts executable"
@@ -64,15 +64,12 @@ curl -sS https://starship.rs/install.sh | sh -s -- --yes
 mkdir ~/.config
 ln -s $mydotfiles/alacritty ~/.config
 ln -s $mydotfiles/awesome ~/.config
-ln -s $mydotfiles/kde.org ~/.config
-ln -s $mydotfiles/neofetch ~/.config
 ln -s $mydotfiles/picom ~/.config
 ln -s $mydotfiles/polybar ~/.config
 ln -s $mydotfiles/qt5ct ~/.config
 ln -s $mydotfiles/rofi ~/.config
 ln -s $mydotfiles/scripts ~/.config
 ln -s $mydotfiles/tmux ~/.config
-ln -s $mydotfiles/wal ~/.config
 ln -s $mydotfiles/dolphinrc ~/.config
 ln -s $mydotfiles/kconf_updaterc ~/.config
 ln -s $mydotfiles/kdeglobals ~/.config
