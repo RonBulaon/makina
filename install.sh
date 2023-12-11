@@ -27,6 +27,12 @@ fi
 # Dell HW Issue
 sudo sh -c 'echo "options i915 modeset=1 enable_rc6=1 enable_fbc=1 enable_guc_loading=1 enable_guc_submission=1 enable_huc=1 enable_psr=1 disable_power_well=0" > /etc/modprobe.d/i915.conf'
 
+# Update
+sudo sh -c "pacman -Sy"
+
+# Install python-pywal
+sudo sh -c "pacman -S --noconfirm python-pywal"
+
 # SSH
 sudo pacman -S openssh && sudo systemctl start sshd && sudo systemctl enable sshd
 
@@ -39,13 +45,13 @@ chmod +x $mydotfiles/rofi/launchers/type-1/launcher.sh
 chmod +x $mydotfiles/polybar/launch.sh
 
 # Optimize Mirrors
-sudo sh -c "pacman -Sy --noconfirm && pacman -S pacman-contrib --noconfirm && cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist"
+sudo sh -c "pacman -S --noconfirm && pacman -S pacman-contrib --noconfirm && cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist"
 
 # Install Yay
 sudo pacman -S --needed --noconfirm base-devel git && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 
 # Install Awesome
-sudo pacman -S --noconfirm alacritty ttf-jetbrains-mono-nerd xdg-user-dirs nitrogen font-manager ttf-font-awesome rofi polybar python-pywal dolphin qt5ct picom tmux neofetch neovim
+sudo sh -c "pacman -S --noconfirm alacritty ttf-jetbrains-mono-nerd xdg-user-dirs nitrogen font-manager ttf-font-awesome rofi polybar dolphin qt5ct picom tmux neofetch neovim"
 
 # Required files and folders
 xdg-user-dirs-update 
