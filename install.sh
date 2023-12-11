@@ -36,15 +36,6 @@ sudo sh -c "pacman -S --noconfirm python-pywal"
 # SSH
 sudo pacman -S --noconfirm openssh && sudo systemctl start sshd && sudo systemctl enable sshd
 
-# Scripts
-echo "Making scripts executable"
-chmod +x $mydotfiles/scripts/startup.sh
-chmod +x $mydotfiles/scripts/set_wallpaper.sh
-chmod +x $mydotfiles/scripts/set_rofitheme.sh
-chmod +x $mydotfiles/scripts/optimize_mirrors.sh
-chmod +x $mydotfiles/rofi/launchers/type-1/launcher.sh 
-chmod +x $mydotfiles/polybar/launch.sh
-
 # Optimize Mirrors
 sudo sh -c "pacman -S --noconfirm && pacman -S pacman-contrib --noconfirm && cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak && rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist"
 
@@ -94,16 +85,25 @@ ln -s $mydotfiles/bash/xinitrc ~/.xinitrc
 source ~/.bashrc 
 source ~/.bash_profile 
 
-# Link wallpapers
+# Link Wallpapers
 ln -s $mywallpaper ~/Pictures/
 
-# Wall paper and theme
+# Scripts
+echo "Making scripts executable"
+chmod +x $mydotfiles/scripts/startup.sh
+chmod +x $mydotfiles/scripts/set_wallpaper.sh
+chmod +x $mydotfiles/scripts/set_rofitheme.sh
+chmod +x $mydotfiles/scripts/optimize_mirrors.sh
+chmod +x $mydotfiles/rofi/launchers/type-1/launcher.sh 
+chmod +x $mydotfiles/polybar/launch.sh
+
+# Wallpaper and theme
 chmod +x ~/.config/polybar/material/scripts/pywal.sh
 wal -i ~/Pictures/wallpaper/samurai.png
 ln -sf ~/.cache/wal/colors.Xresources ~/.Xresources
 set_wallpaper ~/Pictures/wallpaper/samurai.png
 
-# exit awesome
+# Exit Awesome
 while true; do
     clear
     echo "Choose an option:"
