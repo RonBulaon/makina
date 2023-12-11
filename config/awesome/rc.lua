@@ -223,9 +223,7 @@ awful.screen.connect_for_each_screen(function(s)
 -- Adds an empty wibar under my polybar so that the workarea changes
     awful.wibar {
         position = 'top',
-        height   = 48,
-	--margins	 = {
-	--	bottom = 55
+        height   = 40,
    	--},
 	widget = {
 		halign = "not stretched",
