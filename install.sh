@@ -99,6 +99,7 @@ ln -s $mywallpaper ~/Pictures/
 # Wall paper and theme
 wal -i ~/Pictures/wallpaper/samurai.png
 ln -sf ~/.cache/wal/colors.Xresources ~/.Xresources
+set_wallpaper ~/Pictures/wallpaper/samurai.png
 
 # exit awesome
 while true; do
