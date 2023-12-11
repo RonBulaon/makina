@@ -41,6 +41,7 @@ echo "Making scripts executable"
 chmod +x $mydotfiles/scripts/startup.sh
 chmod +x $mydotfiles/scripts/set_wallpaper.sh
 chmod +x $mydotfiles/scripts/set_rofitheme.sh
+chmod +x $mydotfiles/scripts/optimize_mirrors.sh
 chmod +x $mydotfiles/rofi/launchers/type-1/launcher.sh 
 chmod +x $mydotfiles/polybar/launch.sh
 
@@ -97,6 +98,7 @@ source ~/.bash_profile
 ln -s $mywallpaper ~/Pictures/
 
 # Wall paper and theme
+chmod +x ~/.config/polybar/material/scripts/pywal.sh
 wal -i ~/Pictures/wallpaper/samurai.png
 ln -sf ~/.cache/wal/colors.Xresources ~/.Xresources
 set_wallpaper ~/Pictures/wallpaper/samurai.png
